@@ -1,0 +1,44 @@
+{
+	"name": "airdrop",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"sanitize": "npx ts-node merkle/sanitizeData.ts",
+		"build": "npx hardhat compile",
+		"generate-proofs": "npx ts-node merkle/merkle.ts",
+		"upload": "npx ts-node merkle/s3Upload.ts",
+		"deploy:ganache": "hardhat deploy --network ganache --token 0x59A54fAbc474517180Ae26Db7cd057DD7a462Ff0",
+		"deploy:rinkeby": "hardhat deploy --network rinkeby --token 0x59A54fAbc474517180Ae26Db7cd057DD7a462Ff0",
+		"deploy:goerli": "hardhat deploy --network goerli --token 0x59A54fAbc474517180Ae26Db7cd057DD7a462Ff0 --treasury 0xb339Ca83b7606EE52cD33542420B381F76A87874" ,
+		"deploy:bsc": "hardhat deploy --network binance --token 0x9Ab776357142694841d42c1abE08c817a7D13400 --treasury 0x330c3e8bde3f851872537877cbbd52977379215b" ,
+		"deploy:test": "hardhat deploy --network test --token 0x9Ab776357142694841d42c1abE08c817a7D13400 --treasury 0x330c3e8bde3f851872537877cbbd52977379215b" ,
+		"deploy:mainnet": "hardhat deploy --network mainnet --token 0x7e806D59528F6Fa7CCcAdb4821Dd42551113DEFc",
+		"verify": "npx hardhat verify --network binance --constructor-args arguments.js 0x65A017Cb8F4E840d2EE111CEbFCA602Cf2290873",
+		"test": "npx hardhat test"
+	},
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@nomiclabs/hardhat-ethers": "^2.0.1",
+		"@nomiclabs/hardhat-etherscan": "^2.1.1",
+		"@nomiclabs/hardhat-waffle": "^2.0.1",
+		"@types/chai": "^4.2.14",
+		"@types/mocha": "^8.2.0",
+		"@types/node": "^14.14.25",
+		"aws-sdk": "^2.839.0",
+		"chai": "^4.2.0",
+		"csv-parser": "^3.0.0",
+		"dotenv": "^8.2.0",
+		"ethereum-waffle": "^3.2.2",
+		"ethers": "^5.0.26",
+		"hardhat": "^2.0.8",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.1.3"
+	},
+	"dependencies": {
+		"@openzeppelin/contracts": "^3.3.0",
+		"fs": "^0.0.1-security",
+		"should": "^13.2.3"
+	}
+}
