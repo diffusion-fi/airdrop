@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/math/SafeMath.sol";
 contract Airdrop {
     using SafeMath for uint256;
 
-    uint256 private constant TWO_WEEKS = 16 days;
+    uint256 private constant TWO_WEEKS = 6 weeks;
 
     bytes32 public immutable _rootHash;
     IERC20 public immutable _token;
