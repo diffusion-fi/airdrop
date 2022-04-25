@@ -12,7 +12,7 @@
 		"deploy:rinkeby": "hardhat deploy --network rinkeby --token 0x59A54fAbc474517180Ae26Db7cd057DD7a462Ff0",
 		"deploy:goerli": "hardhat deploy --network goerli --token 0x59A54fAbc474517180Ae26Db7cd057DD7a462Ff0 --treasury 0xb339Ca83b7606EE52cD33542420B381F76A87874" ,
 		"deploy:bsc": "hardhat deploy --network binance --token 0x9Ab776357142694841d42c1abE08c817a7D13400 --treasury 0x330c3e8bde3f851872537877cbbd52977379215b" ,
-		"deploy:test": "hardhat deploy --network test --token 0x9Ab776357142694841d42c1abE08c817a7D13400 --treasury 0x330c3e8bde3f851872537877cbbd52977379215b" ,
+		"deploy:test": "hardhat deploy --network test --token 0x9Ab776357142694841d42c1abE08c817a7D13400 --treasury 0xC7E5aa5eefBfD45AeFA61D09eCEE36A5C8352976" ,
 		"deploy:mainnet": "hardhat deploy --network mainnet --token 0x7e806D59528F6Fa7CCcAdb4821Dd42551113DEFc",
 		"verify": "npx hardhat verify --network binance --constructor-args arguments.js 0x65A017Cb8F4E840d2EE111CEbFCA602Cf2290873",
 		"test": "npx hardhat test"

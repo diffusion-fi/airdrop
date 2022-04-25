@@ -22,21 +22,16 @@ npm run test
 npm run generate-proofs
 ```
 
-## TODO 
-
-   - [x] sanatize data (duplicate address, valid address, add up amount)
-  - [x] the 3 functions needed are add up all amounts, check for validity of address and uniqueness of address
-  - [x] and probably should take all amounts and times them by 18 somewhere?
-  - [x] upload to S3
-  - [x] add address and amount to env and/or json and pipe into deploy task 
-  - [x] test sanatize data 
-
 
   ## Flow 
+   from prepare folder 
+   * ```ts-node getData.ts```
+   from root 
+   * ```ts-node merkle/sanatizeData.ts```
+   * ```ts-node merkle/merkle.ts```
+   * ```ts-node merkle/prepDrop.ts```
 
-  * get data 
-  * run sanatize data 
-  * generate tree 
-  * run prepDrop
-  * launch contract with proper token address
-  * verify contract
+   launch
+    * redo token and treasury address
+    * ```yarn test```
+    * ```yarn deploy:mainnet```

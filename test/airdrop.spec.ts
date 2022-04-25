@@ -216,7 +216,7 @@ describe("Airdrop", function () {
         airdrop.sweepPostDeadline(airdropToken.address)
       ).to.be.revertedWith("Airdrop: Deadline has not yet passed.");
 
-      await increaseTime(ethers, 2073600);
+      await increaseTime(ethers, 3728800);
 
       await expect(
         airdrop.redeemPackage(
